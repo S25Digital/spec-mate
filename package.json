@@ -5,22 +5,34 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "mocha --require ts-node/register test/**/*.test.ts"
+    "prebuild": "rimraf dist",
+    "build": "node build.js",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "lint": "eslint ./src",
+    "prettier": "prettier --write ./src/*",
+    "test": "mocha -r esbuild-register 'test/**/*.spec.ts'"
   },
   "author": "SImranjeet Singh",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.7",
     "chai": "^5.1.1",
-    "chai-json-schema": "^1.5.1"
+    "lodash.get": "^4.4.2"
   },
   "devDependencies": {
-    "typescript": "^5.6.2",
-    "ts-node": "^10.9.2",
-    "mocha": "^10.7.3",
     "@types/chai": "^4.3.19",
+    "@types/lodash.get": "^4.4.9",
     "@types/mocha": "^10.0.8",
-    "@types/node": "^22.5.5"
+    "@types/node": "^22.5.5",
+    "esbuild": "^0.23.1",
+    "esbuild-register": "^3.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "mocha": "^10.7.3",
+    "nock": "^13.5.5",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2"
   }
 }
