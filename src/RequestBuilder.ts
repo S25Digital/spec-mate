@@ -207,6 +207,29 @@ export class RequestBuilder {
     });
     return this;
   }
+  
+  //expect json key does expect in response
+  expectJsonKeyExists(key: string): this {
+    this.assertionQueue.push(() => {
+      if (!this.response) throw new Error('Response is not available. Run the request first.');
+  
+      const value = this.response.data[key];
+      expect(value).to.not.be.undefined;  // Asserts that the key exists
+    });
+    return this;
+  }
+  
+  // expect json key dosnot exists in response
+  expectJsonKeyNotExists(key: string): this {
+    this.assertionQueue.push(() => {
+      if (!this.response) throw new Error('Response is not available. Run the request first.');
+  
+      const value = this.response.data[key];
+      expect(value).to.be.undefined;  // Asserts that the key does not exist
+    });
+    return this;
+  }
+  
 
   async run(): Promise<void> {
     if (this.hooks.beforeRequest) {

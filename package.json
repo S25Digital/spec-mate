@@ -1,5 +1,5 @@
 {
-  "name": "specmate",
+  "name": "spec-mate",
   "version": "1.0.0",
   "description": "A powerful, flexible, and easy-to-use API testing framework for Node.js.",
   "main": "dist/index.js",
