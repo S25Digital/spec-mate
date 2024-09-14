@@ -1,4 +1,4 @@
-# **spec-mate**
+# **Spec Mate**
 
 **spec-mate** is a powerful API testing framework developed by **S25Digital**, designed to help developers streamline the process of testing and validating APIs. With support for advanced assertions, customizable hooks, and seamless integration with tools like **Nock**, spec-mate makes it easy to test even the most complex APIs.
 
@@ -277,5 +277,18 @@ api.on('afterRequest', (response) => {
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-
+## **About Us**
 **spec-mate** is developed and maintained by [**S25Digital**](https://s25.digital)
+
+### Related Repository: 
+
+- **mock-mate**
+
+For seamless API testing with mocked responses, check out **[mock-mate](https://github.com/S25Digital/mock-mate)**, another tool developed by **S25Digital**. **mock-mate** is designed to make API mocking simpler and more flexible, providing an easy way to create mock APIs that integrate perfectly with your **spec-mate** tests.
+
+With **mock-mate**, you can:
+- Create mock APIs based on OpenAPI specs.
+- Pre-configure expected responses, headers, and status codes for different scenarios.
+- Seamlessly integrate with **spec-mate** to test APIs in isolation without needing a live backend.
+
+Use **mock-mate** in combination with **spec-mate** to create a complete testing suite for validating API functionality in controlled environments.
