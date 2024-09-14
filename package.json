@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "A powerful, flexible, and easy-to-use API testing framework for Node.js.",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "types",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
+    "build:types": "tsc",
     "build": "node build.js",
     "prepublishOnly": "npm run build",
     "start": "node dist/index.js",
@@ -15,6 +20,27 @@
   },
   "author": "SImranjeet Singh",
   "license": "MIT",
+  "keywords": [
+    "API testing",
+    "API validation",
+    "API mocking",
+    "spec-mate",
+    "automated testing",
+    "HTTP requests",
+    "HTTP response validation",
+    "custom assertions",
+    "mock APIs",
+    "chai assertions",
+    "Nock integration",
+    "postman alternative",
+    "JavaScript API testing",
+    "TypeScript API testing",
+    "openAPI spec",
+    "request validation",
+    "REST API testing",
+    "hooks for API testing",
+    "response validation"
+  ],
   "dependencies": {
     "axios": "^1.7.7",
     "chai": "^5.1.1",

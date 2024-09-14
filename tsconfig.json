@@ -15,7 +15,8 @@
     "incremental": true,
     "baseUrl": ".",
     "declaration": true,
-    "declarationDir": "types"
+    "declarationDir": "types",
+    "emitDeclarationOnly": true
   },
   "include": ["src/**.ts"]
 }
